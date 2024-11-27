@@ -1,0 +1,144 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import VisiMisi from '~/components/widgets/VisiMisi.astro';
+
+const metadata = {
+  title: 'Susu',
+};
+
+const coklat = {
+    src: '/assets/images/susu/CHOCOLATE.png', // Ganti dengan path gambar yang sesuai
+  };
+  const cinnamon = {
+    src: '/assets/images/susu/CINNAMON.png', // Ganti dengan path gambar yang sesuai
+  };
+  const jahe = {
+    src: '/assets/images/susu/GINGER.png', // Ganti dengan path gambar yang sesuai
+  };
+  const matcha = {
+    src: '/assets/images/susu/MATCHA.png', // Ganti dengan path gambar yang sesuai
+  };
+  const melon = {
+    src: '/assets/images/susu/MELON.png', // Ganti dengan path gambar yang sesuai
+  };
+  const original = {
+    src: '/assets/images/susu/ORIGINAL.png', // Ganti dengan path gambar yang sesuai
+  };
+  const redValvet = {
+    src: '/assets/images/susu/RED VELVET.png', // Ganti dengan path gambar yang sesuai
+  };
+  const strawberry = {
+    src: '/assets/images/susu/STRAWBERRY.png', // Ganti dengan path gambar yang sesuai
+  };
+---
+
+<Layout metadata={metadata}>
+  <h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Susu</h1>
+
+  <!-- Products Card Section -->
+  <div class="container mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Melon Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={melon.src} alt="Susu Sapi Pasteurisasi Melon" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Melon</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Susu sapi segar dengan rasa melon yang segar dan lezat.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Melon" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Chocolate Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={coklat.src} alt="Susu Sapi Pasteurisasi Coklat" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Coklat</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Nikmati lezatnya susu coklat yang creamy dan segar.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Coklat" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Ginger Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={jahe.src} alt="Susu Sapi Pasteurisasi Jahe" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Jahe</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Hangatnya jahe dipadukan dengan susu segar, ideal untuk kesehatan.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Jahe" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Cinnamon Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={cinnamon.src} alt="Susu Sapi Pasteurisasi Kayu Manis" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Kayu Manis</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Sensasi kayu manis yang harum dan lezat dalam susu segar.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Kayu%20Manis" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Original Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={original.src} alt="Susu Sapi Pasteurisasi Original" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Original</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Kesegaran susu sapi murni tanpa tambahan rasa.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Original" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Matcha Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={matcha.src} alt="Susu Sapi Pasteurisasi Matcha" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Matcha</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Nikmati kombinasi matcha yang segar dan susu sapi asli.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Matcha" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Red Velvet Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={redValvet.src} alt="Susu Sapi Pasteurisasi Red Velvet" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Red Velvet</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Rasa red velvet yang creamy dalam susu segar yang menyegarkan.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Red%20Velvet" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Strawberry Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={strawberry.src} alt="Susu Sapi Pasteurisasi Strawberry" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Susu Sapi Pasteurisasi Strawberry</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Kesegaran rasa strawberry dalam susu yang lezat dan menyehatkan.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 7,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Susu%20Strawberry" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -6,6 +6,7 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
+  image,
   classes = {},
 } = Astro.props;
 
@@ -17,7 +18,7 @@ const {
 ---
 
 {
-  (title || subtitle || tagline) && (
+  (title || subtitle || tagline || image) && (
     <div class={twMerge('mb-8 md:mx-auto md:mb-12 text-center', containerClass)}>
       {tagline && (
         <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase" set:html={tagline} />
@@ -30,6 +31,20 @@ const {
       )}
 
       {subtitle && <p class={twMerge('mt-4 text-muted', subtitleClass)} set:html={subtitle} />}
+    
+      {/* Jika image adalah objek dengan src dan alt */}
+      {typeof image === 'object' && image?.src && (
+        <div class="mt-6">
+          <img src={image.src} alt={image.alt} class="w-full h-auto mx-auto" />
+        </div>
+      )}
+
+      {/* Jika image adalah string, gunakan sebagai URL dan tambahkan alt default */}
+      {typeof image === 'string' && (
+        <div class="mt-6">
+          <img src={image} alt="Default alt text" class="w-full h-auto mx-auto" />
+        </div>
+      )}
     </div>
   )
 }

@@ -1,7 +1,5 @@
 import slugify from 'limax';
-
 import { SITE, APP_BLOG } from 'astrowind:config';
-
 import { trim } from '~/utils/utils';
 
 export const trimSlash = (s: string) => trim(trim(s, '/'));
@@ -24,89 +22,82 @@ export const cleanSlug = (text = '') =>
 export const BLOG_BASE = cleanSlug(APP_BLOG?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);
 export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
-
 export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
 
-/** */
 export const getCanonical = (path = ''): string | URL => {
   const url = String(new URL(path, SITE.site));
-  if (SITE.trailingSlash == false && path && url.endsWith('/')) {
-    return url.slice(0, -1);
-  } else if (SITE.trailingSlash == true && path && !url.endsWith('/')) {
-    return url + '/';
-  }
-  return url;
+  return SITE.trailingSlash ? (url.endsWith('/') ? url : url + '/') : (url.endsWith('/') ? url.slice(0, -1) : url);
 };
 
-/** */
 export const getPermalink = (slug = '', type = 'page'): string => {
-  let permalink: string;
-
-  if (
-    slug.startsWith('https://') ||
-    slug.startsWith('http://') ||
-    slug.startsWith('://') ||
-    slug.startsWith('#') ||
-    slug.startsWith('javascript:')
-  ) {
+  if (slug.startsWith('http://') || slug.startsWith('https://') || slug.startsWith('://') || slug.startsWith('#') || slug.startsWith('javascript:')) {
     return slug;
   }
 
+  let permalink;
   switch (type) {
     case 'home':
       permalink = getHomePermalink();
       break;
-
     case 'blog':
       permalink = getBlogPermalink();
       break;
-
     case 'asset':
       permalink = getAsset(slug);
       break;
-
     case 'category':
       permalink = createPath(CATEGORY_BASE, trimSlash(slug));
       break;
-
+    case 'profil':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'luaran':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'artikel':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'susu':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'permen':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'yoghurt':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'puding':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
+    case 'stik-susu':
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
+      break;
     case 'tag':
       permalink = createPath(TAG_BASE, trimSlash(slug));
       break;
-
     case 'post':
       permalink = createPath(trimSlash(slug));
       break;
-
     case 'page':
     default:
       permalink = createPath(slug);
       break;
+    case 'product':
+      permalink = createPath('produk', trimSlash(slug));
+      break;      
   }
-
   return definitivePermalink(permalink);
 };
 
-/** */
-export const getHomePermalink = (): string => getPermalink('/');
-
-/** */
+export const getHomePermalink = (): string => getPermalink('');
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+export const getAsset = (path: string): string => '/' + [BASE_PATHNAME, path].map(trimSlash).filter(Boolean).join('/');
 
-/** */
-export const getAsset = (path: string): string =>
-  '/' +
-  [BASE_PATHNAME, path]
-    .map((el) => trimSlash(el))
-    .filter((el) => !!el)
-    .join('/');
-
-/** */
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
 
-/** */
 export const applyGetPermalinks = (menu: object = {}) => {
   if (Array.isArray(menu)) {
-    return menu.map((item) => applyGetPermalinks(item));
+    return menu.map(applyGetPermalinks);
   } else if (typeof menu === 'object' && menu !== null) {
     const obj = {};
     for (const key in menu) {
@@ -127,7 +118,7 @@ export const applyGetPermalinks = (menu: object = {}) => {
       } else {
         obj[key] = applyGetPermalinks(menu[key]);
       }
-    }
+    } 
     return obj;
   }
   return menu;

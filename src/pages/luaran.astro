@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Luaran',
+};
+
+const heroImage = {
+    src: '/assets/images/luaran.JPG', // Ganti dengan path gambar yang sesuai
+    alt: 'Juragan Perempuan Tani',
+  };
+
+  const buku = {
+    src: '/assets/images/luaran/buku.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const executive = {
+    src: '/assets/images/luaran/executive.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const inovasi = {
+    src: '/assets/images/luaran/inovasi alat.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const modul = {
+    src: '/assets/images/luaran/modul.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const poster = {
+    src: '/assets/images/luaran/poster pembelajaran.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const struktur = {
+    src: '/assets/images/luaran/struktur.png', // Ganti dengan path gambar yang sesuai
+  };
+
+---
+
+<Layout metadata={metadata}>
+    <div class="relative w-full h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[50rem]"> <!-- Memperpanjang tinggi gambar -->
+        <img 
+          src={heroImage.src} 
+          alt={heroImage.alt}
+          class="w-full h-full object-cover object-top"
+          style="object-position: 50% 30%; filter: brightness(70%);"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-12">
+          <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6">Luaran</h1>
+          <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-white">
+            PPKO Labma UII melaksanakan Program Pemberdayaan Kelompok Ormawa (PPKO) dengan tujuan untuk meningkatkan kemandirian ekonomi dan keterampilan perempuan tani di Desa Purwobinangun melalui inovasi dan pelatihan di bidang pengolahan susu. Program ini menghasilkan beberapa luaran penting, yang dirancang untuk mendukung perempuan tani dalam mengelola usaha peternakan susu secara berkelanjutan, efektif, dan berdaya saing tinggi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Struktur Organisasi Sekolah Section -->
+      <div class="inset-0 bg-blue-50 dark:bg-transparent">
+        <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+            <!-- Text on the Left -->
+            <div class="md:w-1/2 space-y-4 md:pr-8">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Struktur Organisasi Sekolah</h2>
+            <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                Struktur organisasi Sekolah Perempuan Tani terdiri dari ketua, wakil ketua, sekretaris, bendahara, dan beberapa koordinator yang mengelola bagian seperti pengembangan produk, pemasaran, pelatihan, keuangan, dan kemitraan. Masing-masing bagian didukung oleh anggota yang bertugas menjalankan fungsi operasional.
+            </p>
+            </div>
+            <!-- Image on the Right -->
+            <div class="md:w-1/2 mt-8 md:mt-0">
+            <img src={struktur.src}  alt="Struktur Organisasi" class="w-full h-80 object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+
+        <!-- Alat Inovasi Pengolahan Susu Section -->
+        <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+            <!-- Image on the Left -->
+            <div class="md:w-1/2 mt-8 md:mt-0 order-2 md:order-1">
+            <img src={inovasi.src}  alt="Alat Inovasi Pengolahan Susu" class="w-full h-80 object-cover rounded-lg shadow-lg">
+            </div>
+            <!-- Text on the Right -->
+            <div class="md:w-1/2 space-y-4 md:pl-8 order-1 md:order-2">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Alat Inovasi Pengolahan Susu</h2>
+            <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                Alat inovasi pengolahan susu mencakup mesin untuk membuat susu pasteurisasi, dan fermentasi yoghurt. Alat ini meningkatkan efisiensi dan kualitas produk susu sapi lokal. Inovasi ini bertujuan untuk menghasilkan produk berkualitas tinggi, dan mendukung pengembangan usaha susu sapi lokal dengan variasi produk yang memiliki nilai tambah.
+            </p>
+            </div>
+        </div>
+
+        <div class="inset-0 bg-blue-50 dark:bg-transparent">
+            <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+                <!-- Text on the Left -->
+                <div class="md:w-1/2 space-y-4 md:pr-8">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Poster Pembelajaran</h2>
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        Poster pembelajaran Sekolah Perempuan Tani Ternak merupakan media visual edukatif yang dirancang khusus untuk mendukung pelaksanaan program Sekolah Perempuan Tani Ternak. Maka dengan media pembelajaran ini materi lebih mudah untuk difahami dan dipraktikan guna produksi yang berkelanjutan.
+                    </p>
+                </div>
+                <!-- Image on the Right -->
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <img src={poster.src}  alt="Poster" class="w-full h-80 object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+                <!-- Image on the Left -->
+            <div class="md:w-1/2 mt-8 md:mt-0 order-2 md:order-1">
+                <img src={buku.src}  alt="Alat Inovasi Pengolahan Susu" class="w-full h-80 object-cover rounded-lg shadow-lg">
+            </div>
+                <!-- Text on the Right -->
+            <div class="md:w-1/2 space-y-4 md:pl-8 order-1 md:order-2">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Buku Juragan Perempuan Tani Ternak</h2>
+                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                    Buku Juragan Perempuan Tani Ternak disusun secara komprehensif untuk mengelola bisnis peternakan susu dan juga proses pengolahan susu sapi lokal. Buku ini bertujuan untuk membantu pembaca memahami langkah-langkah teknis dan bisnis secara efektif untuk menghasilkan produk susu berkualitas tinggi dan mengembangkan usaha secara berkelanjutan.
+                </p>
+            </div>
+        </div>
+    
+        <div class="inset-0 bg-blue-50 dark:bg-transparent">
+            <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+                <!-- Text on the Left -->
+                <div class="md:w-1/2 space-y-4 md:pr-8">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Modul Pembelajaran</h2>
+                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                        Modul pembelajaran pengolahan susu ini dirancang untuk memberikan pemahaman menyeluruh tentang proses dan teknik pengolahan susu. Modul ini mencakup berbagai aspek penting dalam pengolahan susu, mulai dari pengenalan dasar tentang susu hingga teknik-teknik pengolahan susu yang lebih kompleks.
+                    </p>
+                </div>
+                    <!-- Image on the Right -->
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <img src={modul.src}  alt="Struktur Organisasi" class="w-full h-80 object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mt-8 md:mt-0 order-2 md:order-1">
+                <img src={executive.src}  alt="Alat Inovasi Pengolahan Susu" class="w-full h-80 object-cover rounded-lg shadow-lg">
+            </div>
+                    <!-- Text on the Right -->
+            <div class="md:w-1/2 space-y-4 md:pl-8 order-1 md:order-2">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Ringkasan Eksekutif</h2>
+                <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                    Ringkasan eksekutif disusun untuk merangkum program yang menggabungkan pemanfaatan teknologi pengolahan susu, pembentukan Sekolah Bisnis Ternak, dan pengembangan inovasi produk. Program ini bertujuan untuk meningkatkan pengetahuan melalui pelatihan yang diselenggarakan di Sekolah Perempuan Tani Ternak, dengan fokus pada pengelolaan usaha susu yang lebih efektif dan berdaya saing tinggi.
+                </p>
+            </div>
+        </div>
+</Layout>

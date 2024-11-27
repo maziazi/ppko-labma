@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Artikel',
+};
+
+const heroImage = {
+    src: '/assets/images/artikel.JPG', // Ganti dengan path gambar yang sesuai
+    alt: 'Juragan Perempuan Tani',
+  };
+
+  const uii = {
+    src: '/assets/images/artikel/uii.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const artikelilmiah = {
+    src: '/assets/images/artikel/artikelilmiah.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const kompasiana = {
+    src: '/assets/images/artikel/kompassiana.png', // Ganti dengan path gambar yang sesuai
+  };
+
+  const yours = {
+    src: '/assets/images/artikel/yours.png', // Ganti dengan path gambar yang sesuai
+  };
+
+---
+
+<Layout metadata={metadata}>
+  <div class="relative w-full h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[50rem]"> <!-- Memperpanjang tinggi gambar -->
+    <img 
+      src={heroImage.src} 
+      alt={heroImage.alt}
+      class="w-full h-full object-cover object-top"
+      style="object-position: 50% 30%; filter: brightness(70%);"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-12">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6">Artikel</h1>
+      <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-white">
+        Berisi kumpulan artikel dari PPKO Labma UII yang telah dipublikasikan di berbagai platform, seperti blog kampus, jurnal ilmiah, dan media lainnya. Artikel-artikel ini mencakup topik pemberdayaan perempuan tani, inovasi pengolahan susu, serta pengembangan usaha berbasis komunitas di Desa Purwobinangun. Setiap artikel bertujuan untuk menyebarkan pengetahuan dan pengalaman PPKO Labma dalam mendukung kemandirian ekonomi dan keterampilan perempuan tani, serta menjadi referensi bagi kalangan akademis dan praktisi di bidang pemberdayaan masyarakat.
+      </p>
+    </div>
+  </div>  
+    
+      <!-- About Section -->
+      <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20">
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-center max-w-4xl mx-auto">
+        </p>
+      </div>
+
+    <!-- Articles Card Section -->
+    <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src={kompasiana.src} alt="Sekolah Perempuan Tani" class="w-full h-56 object-cover">
+        <div class="p-6 flex-1">
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Tim PPKO LabMa UII Gelar Sekolah Perempuan Tani Guna Pengembangan Sentra Produk Lokal Desa Purwobinangun</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            Tim PPKO Labma UII mengadakan Sekolah Perempuan Tani untuk mendorong pengembangan produk lokal di Desa Purwobinangun.
+          </p>
+          <a href="https://www.kompasiana.com/yustikaedhowicaksono1951/66ae3a36c925c446e37a6712/tim-ppko-labma-uii-gelar-sekolah-perempuan-tani-guna-pengembangan-sentra-produk-lokal-desa-purwobinangun" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center block hover:bg-blue-700 transition duration-300">
+            Baca Selengkapnya
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src={yours.src} alt="Sekolah Perempuan Tani di Dusun Kemiri" class="w-full h-56 object-cover">
+        <div class="p-6 flex-1">
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Berdayakan KWT, Tim PPKO Ormawa Labma UII Gelar Sekolah Perempuan Tani di Dusun Kemiri</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            Kegiatan ini bertujuan untuk memberdayakan kelompok wanita tani (KWT) dan mendorong produktivitas usaha di wilayah Dusun Kemiri.
+          </p>
+          <a href="https://yoursay.suara.com/news/2024/08/12/133020/berdayakan-kwt-tim-ppk-ormawa-labma-uii-gelar-sekolah-perempuan-tani-di-dusun-kemiri" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center block hover:bg-blue-700 transition duration-300">
+            Baca Selengkapnya
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src={uii.src} alt="Pendanaan PPK Ormawa" class="w-full h-56 object-cover">
+        <div class="p-6 flex-1">
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Laboratorium Mahasiswa UII Lolos Pendanaan PPK Ormawa</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            Laboratorium Mahasiswa UII berhasil mendapatkan pendanaan untuk program PPK Ormawa, sebagai upaya pengembangan pendidikan dan inovasi.
+          </p>
+          <a href="https://www.uii.ac.id/laboratorium-mahasiswa-uii-lolos-pendanaan-ppk-ormawa/" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center block hover:bg-blue-700 transition duration-300">
+            Baca Selengkapnya
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src={artikelilmiah.src} alt="Pendanaan PPK Ormawa" class="w-full h-56 object-cover">
+        <div class="p-6 flex-1">
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Artikel Ilmiah</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            Artikel Ilmiah dari PPKO Labma mengenai inovasi pengolahan susu sebagai upaya pemberdayaan perempuan: dampak terhadap kemandirian
+          </p>
+          <a href="https://docs.google.com/document/d/1AAOWHZlbrpbPoxTAAuk9aInO52pdLz_w/edit" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center block hover:bg-blue-700 transition duration-300">
+            Baca Selengkapnya
+          </a>
+        </div>
+      </div>
+    </div>
+</Layout>

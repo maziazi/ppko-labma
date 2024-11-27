@@ -109,6 +109,10 @@ export interface Headline {
   title?: string;
   subtitle?: string;
   tagline?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
   classes?: Record<string, string>;
 }
 
@@ -242,7 +246,7 @@ export interface Brands extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Features extends Omit<Headline, 'classes'>, Widget {
-  image?: string | unknown;
+  image?: {src: string; alt: string;} | string;
   video?: Video;
   items?: Array<Item>;
   columns?: number;

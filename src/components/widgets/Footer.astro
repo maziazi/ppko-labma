@@ -15,15 +15,22 @@ interface Links {
   links: Array<Link>;
 }
 
+interface Images {
+  src: string;
+  alt: string;
+  href?: string;
+}
+
 export interface Props {
   links: Array<Links>;
   secondaryLinks: Array<Link>;
   socialLinks: Array<Link>;
+  logos: Array<Images>;
   footNote?: string;
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], logos =[], address = '', footNote = '', theme = 'light' } = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -48,6 +55,9 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             ))
           }
         </div>
+        <div class="text-sm text-muted flex gap-4">
+          <Fragment set:html={address} />
+        </div>
       </div>
       {
         links.map(({ title, links }) => (
@@ -71,7 +81,36 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           </div>
         ))
       }
+      
+      <div class="col-span-12 lg:col-span-4 flex justify-around items-center flex-wrap">
+        {/* Baris pertama: dua logo di atas */}
+        <div class="w-full flex justify-center">
+          {logos.slice(0, 2).map(({ src, alt }) => (
+            <div class="col-span-4">
+              <ul class="text-sm">
+                <li>
+                  <img src={src} alt={alt} class="w-auto max-h-24" />
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      
+        {/* Baris kedua: dua logo di tengah */}
+        <div class="w-full flex justify-center">
+          {logos.slice(2, 5).map(({ src, alt }) => (
+            <div class="col-span-3">
+              <ul class="text-sm">
+                <li>
+                  <img src={src} alt={alt} class="w-auto max-h-24" />
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
+
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {
         socialLinks?.length ? (

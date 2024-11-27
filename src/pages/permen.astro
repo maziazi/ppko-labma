@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import VisiMisi from '~/components/widgets/VisiMisi.astro';
+
+const metadata = {
+  title: 'Permen',
+};
+const coklat= {
+    src: '/assets/images/permen/COKELAT.png', // Ganti dengan path gambar yang sesuai
+  };
+  const strawberry= {
+    src: '/assets/images/permen/STRAWBERRY.png', // Ganti dengan path gambar yang sesuai
+  };
+  const vanila= {
+    src: '/assets/images/permen/VANILLA.png', // Ganti dengan path gambar yang sesuai
+  };
+---
+
+<Layout metadata={metadata}>
+  <h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Permen</h1>
+
+  <!-- Products Card Section -->
+  <div class="container mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Vanilla Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={vanila.src} alt="Permen Susu Vanilla" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Permen Susu Vanilla</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Permen susu dengan rasa vanilla yang lembut dan manis.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 10,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Permen%20Susu%20Vanilla" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Strawberry Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={strawberry.src} alt="Permen Susu Strawberry" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Permen Susu Strawberry</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Permen susu dengan rasa strawberry yang segar dan menyegarkan.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 10,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Permen%20Susu%20Strawberry" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Chocolate Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={coklat.src} alt="Permen Susu Cokelat" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Permen Susu Cokelat</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Permen susu dengan rasa cokelat yang kaya dan lezat.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 10,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Permen%20Susu%20Cokelat" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

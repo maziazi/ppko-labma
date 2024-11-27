@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: Perempuan Tani Purwobinangun
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Perempuan Tani Purwobinangun
+    template: 'PPKO Labma'
+  description: "Juragan Perempuan Tani hadir untuk memberdayakan perempuan melalui teknologi pengolahan dan bisnis, mendorong mereka mengoptimalkan potensi lokal dan menciptakan peluang ekonomi berkelanjutan di Purwobinangun."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Perempuan Tani Purwobinangun
     images:
-      - url: '~/assets/images/default.png'
+      - url: '/assets/images/logo-ppko-labma.png'
         width: 1200
         height: 628
     type: website

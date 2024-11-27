@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import VisiMisi from '~/components/widgets/VisiMisi.astro';
+
+const metadata = {
+  title: 'Puding',
+};
+
+const puding= {
+    src: '/assets/images/puding/PUDDING.png', // Ganti dengan path gambar yang sesuai
+  };
+---
+
+<Layout metadata={metadata}>
+  <h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Puding</h1>
+
+  <!-- Products Card Section -->
+  <div class="container mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={puding.src} alt="Susu Murni" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2"> Puding</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Puding susu yang kenyal dan fresh, diolah dari susu murni yang bergizi</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 3,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Puding" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

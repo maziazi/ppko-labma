@@ -3,7 +3,6 @@ import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
@@ -33,15 +32,31 @@ const metadata = {
     type: 'blog',
   },
 };
+
+const heroImage = {
+    src: '/assets/images/blog.JPG', // Ganti dengan path gambar yang sesuai
+    alt: 'Juragan Perempuan Tani',
+  };
+
 ---
 
 <Layout metadata={metadata}>
+  <div class="relative w-full h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[50rem]"> <!-- Memperpanjang tinggi gambar -->
+    <img 
+      src={heroImage.src} 
+      alt={heroImage.alt}
+      class="w-full h-full object-cover object-top"
+      style="object-position: 50% 30%; filter: brightness(70%);"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-12">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6">Blog</h1>
+      <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-white">
+        Blog PPKO Labma UII menyajikan cerita inspiratif tentang pemberdayaan perempuan tani di Desa Purwobinangun melalui pelatihan dan inovasi pengolahan produk lokal. Temukan kisah-kisah transformasi dan dampak sosial dari program yang menghubungkan mahasiswa dengan masyarakat desa ini.
+      </p>
+    </div>
+  </div>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
-    >
-      The Blog
-    </Headline>
+    
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--

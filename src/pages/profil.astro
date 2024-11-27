@@ -1,0 +1,566 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import VisiMisi from '~/components/widgets/VisiMisi.astro';
+
+const metadata = {
+  title: 'Profil',
+};
+
+const heroImage = {
+  src: '/assets/images/profil/tentang-kami.JPG', // Ganti dengan path gambar yang sesuai
+  alt: 'Juragan Perempuan Tani',
+};
+
+const visiMisi = {
+  src: '/assets/images/profil/visi-misi.png', // Ganti dengan path gambar yang sesuai
+};
+
+const satu = {
+  src: '/assets/images/profil/1.png', // Ganti dengan path gambar yang sesuai
+};
+const dua = {
+  src: '/assets/images/profil/2.png', // Ganti dengan path gambar yang sesuai
+};
+const tiga = {
+  src: '/assets/images/profil/3.png', // Ganti dengan path gambar yang sesuai
+};
+const empat = {
+  src: '/assets/images/profil/4.png', // Ganti dengan path gambar yang sesuai
+};
+
+const koprasi = {
+  src: '/assets/images/profil/dinas-koprasi-dan-ukm-sleman.png', // Ganti dengan path gambar yang sesuai
+};
+const pertanian = {
+  src: '/assets/images/profil/dinas-pertanian-pangan-dan-perikanan-sleman.png', // Ganti dengan path gambar yang sesuai
+};
+const peternakan = {
+  src: '/assets/images/profil/fakultas-peternakan.png', // Ganti dengan path gambar yang sesuai
+};
+const ibisma = {
+  src: '/assets/images/profil/ibisma.png', // Ganti dengan path gambar yang sesuai
+};
+const sibakul = {
+  src: '/assets/images/profil/sibakul-jogja.png', // Ganti dengan path gambar yang sesuai
+};
+
+const peng1 = {
+  src: '/assets/images/profil/pengurus/1.png', // Ganti dengan path gambar yang sesuai
+};
+const peng2 = {
+  src: '/assets/images/profil/pengurus/2.png', // Ganti dengan path gambar yang sesuai
+};
+const peng3 = {
+  src: '/assets/images/profil/pengurus/3.png', // Ganti dengan path gambar yang sesuai
+};
+const peng4 = {
+  src: '/assets/images/profil/pengurus/4.png', // Ganti dengan path gambar yang sesuai
+};
+const peng5 = {
+  src: '/assets/images/profil/pengurus/5.png', // Ganti dengan path gambar yang sesuai
+};
+const peng6 = {
+  src: '/assets/images/profil/pengurus/6.png', // Ganti dengan path gambar yang sesuai
+};
+const peng7 = {
+  src: '/assets/images/profil/pengurus/7.png', // Ganti dengan path gambar yang sesuai
+};
+const peng8 = {
+  src: '/assets/images/profil/pengurus/8.png', // Ganti dengan path gambar yang sesuai
+};
+const peng9 = {
+  src: '/assets/images/profil/pengurus/9.png', // Ganti dengan path gambar yang sesuai
+};
+const peng10 = {
+  src: '/assets/images/profil/pengurus/10.png', // Ganti dengan path gambar yang sesuai
+};
+const peng11 = {
+  src: '/assets/images/profil/pengurus/11.png', // Ganti dengan path gambar yang sesuai
+};
+const peng12 = {
+  src: '/assets/images/profil/pengurus/12.png', // Ganti dengan path gambar yang sesuai
+};
+
+
+
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Image Section -->
+  <div class="relative w-full h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[50rem]"> <!-- Memperpanjang tinggi gambar -->
+    <img 
+      src={heroImage.src} 
+      alt={heroImage.alt}
+      class="w-full h-full object-cover object-top"
+      style="object-position: 50% 30%; filter: brightness(70%);"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-12">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6">Tentang Kami</h1>
+      <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-white">
+        Juragan Perempuan Tani, komunitas pemberdayaan perempuan di Purwobinangun yang fokus pada sektor pertanian. 
+        Dengan memberdayakan perempuan tani, kami menciptakan perubahan positif bagi individu, keluarga, dan masyarakat, 
+        serta mendukung pertanian berkelanjutan untuk masa depan yang lebih baik.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Visi Misi Section -->
+  <div class="inset-0 bg-blue-50 dark:bg-transparent">
+    <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <!-- Visi dan Misi Kami -->
+      <div class="flex flex-col space-y-8">
+        <!-- Visi Kami -->
+        <div class="space-y-4">
+          <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Visi Kami</h2>
+          <p class="text-lg leading-relaxed">
+            Menjadikan Desa Purwobinangun sebagai pusat pengolahan produk susu berkualitas dengan perempuan tani yang aktif berkontribusi dalam perekonomian dan pembangunan desa.
+          </p>
+        </div>
+  
+        <!-- Misi Kami -->
+        <div class="space-y-4">
+          <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Misi Kami</h2>
+          <ul class="text-lg leading-relaxed list-disc pl-5">
+            <li>Meningkatkan pengetahuan perempuan tani tentang pengembangan produk olahan susu melalui pelatihan teknologi modern.</li>
+            <li>Mengoptimalkan potensi susu sapi perah untuk menghasilkan produk berkualitas seperti susu pasteurisasi, yoghurt, dan mentega.</li>
+            <li>Mengembangkan produk olahan susu sebagai sentra unggulan di Desa Purwobinangun.</li>
+            <li>Membentuk wirausaha baru melalui program PPK Ormawa untuk mendukung perempuan tani menjadi pengusaha.</li>
+            <li>Meningkatkan perekonomian keluarga perempuan tani melalui produk olahan susu.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Gambar Visi Misi -->
+      <div>
+        <img src={visiMisi.src} alt="Visi dan Misi Kami" class="w-full h-80 object-cover rounded-lg shadow-lg" />
+      </div>
+    </div>  
+  </div>
+
+  <!-- 4 Pilar Section -->
+  <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20">
+    <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">4 Pilar Juragan Perempuan Tani</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Pilar 1: Pemberdayaan Ekonomi -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src={satu.src} alt="Pemberdayaan Ekonomi" class="w-32 h-32 object-cover rounded-full shadow-lg" />
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Pemberdayaan Ekonomi</h3>
+        <p class="text-lg leading-relaxed">Mendukung peningkatan ekonomi perempuan tani melalui pengembangan produk lokal yang berdaya saing.</p>
+      </div>
+      
+      <!-- Pilar 2: Inovasi Teknologi -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src={dua.src} alt="Inovasi Teknologi" class="w-32 h-32 object-cover rounded-full shadow-lg" />
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Inovasi Teknologi</h3>
+        <p class="text-lg leading-relaxed">Memperkenalkan teknologi modern untuk meningkatkan kualitas dan efisiensi produk pertanian.</p>
+      </div>
+      
+      <!-- Pilar 3: Pengembangan Komunitas -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src={tiga.src} alt="Pengembangan Komunitas" class="w-32 h-32 object-cover rounded-full shadow-lg" />
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Pengembangan Komunitas</h3>
+        <p class="text-lg leading-relaxed">Membentuk komunitas yang kuat dan mendukung melalui pelatihan dan kerja sama antar anggota.</p>
+      </div>
+      
+      <!-- Pilar 4: Pengembangan Lingkungan -->
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src={empat.src} alt="Pengembangan Lingkungan" class="w-32 h-32 object-cover rounded-full shadow-lg" />
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Pengembangan Lingkungan</h3>
+        <p class="text-lg leading-relaxed">Mengutamakan praktik pertanian berkelanjutan yang ramah lingkungan dan menjaga alam.</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Roadmap Section -->
+  <div class="inset-0 bg-blue-50 dark:bg-transparent">
+    <div class="container mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20">
+      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">Road Map Juragan Perempuan Tani selama 4 tahun ke depan</h2>
+      
+      <div class="relative flex flex-col items-center space-y-10">
+        <!-- Vertical Line -->
+        <div class="absolute left-1/2 h-full w-1 bg-gray-300 transform -translate-x-1/2"></div>
+        
+        <!-- Year 2024 -->
+        <div class="flex items-center space-x-6 w-full">
+          <div class="flex justify-end w-1/2 pr-4">
+            <div class="bg-white dark:bg-transparent p-4 rounded-lg shadow-md w-full md:w-3/4">
+              <h3 class="text-xl font-bold text-blue-600">2024</h3>
+              <p class="text-lg leading-relaxed">Pengenalan dan Inisiasi Teknologi - Mitra mampu mengoptimalkan teknologi yang diberikan.</p>
+            </div>
+          </div>
+          <div class="w-1/12 flex justify-center">
+            <div class="w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+          </div>
+          <div class="w-1/2"></div>
+        </div>
+        
+        <!-- Year 2025 -->
+        <div class="flex items-center space-x-6 w-full">
+          <div class="w-1/2"></div>
+          <div class="w-1/12 flex justify-center">
+            <div class="w-6 h-6 bg-red-600 rounded-full border-4 border-white"></div>
+          </div>
+          <div class="flex justify-start w-1/2 pl-4">
+            <div class="bg-white dark:bg-transparent p-4 rounded-lg shadow-md w-full md:w-3/4">
+              <h3 class="text-xl font-bold text-red-600">2025</h3>
+              <p class="text-lg leading-relaxed">Scale Up Bisnis - Mitra secara mandiri mampu mengaplikasikan konsep teknologi yang diajarkan.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Year 2026 -->
+        <div class="flex items-center space-x-6 w-full">
+          <div class="flex justify-end w-1/2 pr-4">
+            <div class="bg-white dark:bg-transparent p-4 rounded-lg shadow-md w-full md:w-3/4">
+              <h3 class="text-xl font-bold text-green-600">2026</h3>
+              <p class="text-lg leading-relaxed">Penguatan Teknologi, Bisnis, dan Inovasi Berkelanjutan - Analisis SWOT dan kemandirian perempuan bagi penguatan ekonomi desa.</p>
+            </div>
+          </div>
+          <div class="w-1/12 flex justify-center">
+            <div class="w-6 h-6 bg-green-600 rounded-full border-4 border-white"></div>
+          </div>
+          <div class="w-1/2"></div>
+        </div>
+        
+        <!-- Year 2027 -->
+        <div class="flex items-center space-x-6 w-full">
+          <div class="w-1/2"></div>
+          <div class="w-1/12 flex justify-center">
+            <div class="w-6 h-6 bg-yellow-600 rounded-full border-4 border-white"></div>
+          </div>
+          <div class="flex justify-start w-1/2 pl-4">
+            <div class="bg-white dark:bg-transparent p-4 rounded-lg shadow-md w-full md:w-3/4">
+              <h3 class="text-xl font-bold text-yellow-600">2027</h3>
+              <p class="text-lg leading-relaxed">Sentra Produk Desa - Hasil pengolahan susu menjadi sentra produk desa Purwobinangun.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons to Toggle Structure Sections -->
+  <div class="container mx-auto px-4 py-8 flex justify-center space-x-4">
+    <button id="btnLabma" onclick="toggleLabma()" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+      Struktur PPKO Labma 2024
+    </button>
+    <button id="btnKWT" onclick="toggleKWT()" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+      Struktur KWT Purwobinangun
+    </button>
+  </div>
+
+  <!-- Struktur PPKO Labma 2024 Section -->
+  <div id="labmaStructure" class="container mx-auto px-4 py-8">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center">Struktur Organisasi PPKO Labma 2024</h3>
+
+    <!-- Chief Executive Section - Centered -->
+    <div class="flex flex-col items-center mb-8">
+      <!-- Chief Executive -->
+      <div class="flex flex-col items-center w-48"> <!-- Set the width of the entire card container -->
+        <!-- Enlarged Image without cropping -->
+        <img src={peng6.src} alt="Fikar Maulana" class="w-full rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full"> <!-- Full width card content -->
+          <h4 class="text-lg font-semibold dark:text-white">Fikar Maulana</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Chief Executive</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Family Law '22</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finance and Administration Section - Centered, Side by Side -->
+    <div class="flex justify-center space-x-8 mb-8">
+      <!-- Finance -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng10.src} alt="Karin Firly Zafira" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Karin Firly Zafira</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Finance</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Psychology '21</p>
+        </div>
+      </div>
+
+      <!-- Secretary Administration -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng8.src} alt="Rahmanisa Amani" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Rahmanisa Amani</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Secretary Administration</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Communication '21</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Departments Section -->
+    <div class="flex justify-center">
+    <div class="justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-4xl">
+      
+      <!-- Information Media -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng2.src} alt="Putri Rahma Dwianggreini" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Putri Rahma Dwianggreini</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Information Media</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Communication '21</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-48">
+        <img src={peng7.src} alt="Yustika Edho Wicaksono" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Yustika Edho Wicaksono</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Information Media</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Islamic Education '22</p>
+        </div>
+      </div>
+
+      <!-- Logistics -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng12.src} alt="Ali Hasan" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Ali Hasan</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Logistics</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Chemical Engineering '21</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-48">
+        <img src={peng11.src} alt="M Hizbullah Furqon" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">M Hizbullah Furqon</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Logistics</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Chemical Engineering '21</p>
+        </div>
+      </div>
+
+      <!-- Event Section -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng1.src} alt="Saffanah Azka Mufida" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Saffanah Azka Mufida</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Event Section</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Chemical Engineering '21</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-48">
+        <img src={peng5.src} alt="Salma Aliyah" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Salma Aliyah</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Event Section</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Psychology '23</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-48">
+        <img src={peng3.src} alt="Ikma Nur Faizah" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Ikma Nur Faizah</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Event Section</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">International Relations '22</p>
+        </div>
+      </div>
+
+      <!-- Curriculum Planning -->
+      <div class="flex flex-col items-center w-48">
+        <img src={peng4.src} alt="Safina Rahmatun Muarrifah" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Safina Rahmatun Muarrifah</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Curriculum Planning</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Psychology '23</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-48">
+        <img src={peng9.src}alt="Muhammad Lus Erik" class="w-full h-auto rounded-t-lg -mb-4 z-10">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-b-lg shadow-lg text-center w-full">
+          <h4 class="text-lg font-semibold dark:text-white">Muhammad Lus Erik</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Curriculum Planning</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Chemical Engineering '22</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Struktur KWT Purwobinangun Section -->
+  <div id="kwtStructure" class="container mx-auto px-4 py-8 hidden">
+    <h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Struktur Organisasi KWT Purwobinangun</h1>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col items-center space-y-4">
+        <!-- Root level: Pengawas -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+            <h4 class="text-xl font-semibold dark:text-white">Pengawas</h4>
+            <p class="text-gray-700 dark:text-gray-300">Heri Suasana</p>
+          </div>
+          <div class="h-8 border-l-4 border-blue-600"></div>
+        </div>
+
+        <!-- Second level: Pembina, Ketua, Wakil Ketua -->
+        <div class="flex space-x-16 items-start">
+          <!-- Pembina -->
+          <div class="flex flex-col items-center">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-xl font-semibold dark:text-white">Pembina</h4>
+              <p class="text-gray-700 dark:text-gray-300">Widy Ayu Wardana</p>
+            </div>
+            <div class="h-8 border-l-4 border-blue-600"></div>
+          </div>
+
+          <!-- Ketua -->
+          <div class="flex flex-col items-center">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-xl font-semibold dark:text-white">Ketua</h4>
+              <p class="text-gray-700 dark:text-gray-300">Sri Budiastuti</p>
+            </div>
+            <div class="h-8 border-l-4 border-blue-600"></div>
+          </div>
+
+          <!-- Wakil Ketua -->
+          <div class="flex flex-col items-center">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-xl font-semibold dark:text-white">Wakil Ketua</h4>
+              <p class="text-gray-700 dark:text-gray-300">Suryantoro</p>
+            </div>
+            <div class="h-8 border-l-4 border-blue-600"></div>
+          </div>
+        </div>
+
+        <!-- Third level: Departments -->
+        <div class="flex flex-wrap justify-center space-x-4 mt-4">
+          <!-- Each department is represented in a flex column with team members underneath -->
+          
+          <!-- Bag Pengembangan Produk & Inovasi -->
+          <div class="flex flex-col items-center space-y-2">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-lg font-semibold dark:text-white">Bag. Pengembangan Produk & Inovasi</h4>
+              <p class="text-gray-700 dark:text-gray-300">Sri Khotima (Koordinator)</p>
+            </div>
+            <div class="border-l-4 border-blue-600 h-4"></div>
+            <div class="space-y-2">
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sanihim</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Rantinem</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Emawati</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Boinem</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Wiwik Windari</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Muji Riyanti</div>
+            </div>
+          </div>
+
+          <!-- Bag Pemasaran Produk & Promosi -->
+          <div class="flex flex-col items-center space-y-2">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-lg font-semibold dark:text-white">Bag. Pemasaran Produk & Promosi</h4>
+              <p class="text-gray-700 dark:text-gray-300">Supriyati (Koordinator)</p>
+            </div>
+            <div class="border-l-4 border-blue-600 h-4"></div>
+            <div class="space-y-2">
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Akhdul Hakim</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Anggota Putri</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Yani</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Jariyah</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Yulanda</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Titin Nurlaela</div>              
+            </div>
+          </div>
+
+          <!-- Bag -->
+          <div class="flex flex-col items-center space-y-2">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-lg font-semibold dark:text-white">Bag. Pelatihan dan Kurikulum</h4>
+              <p class="text-gray-700 dark:text-gray-300">Narni (Koordinator)</p>
+            </div>
+            <div class="border-l-4 border-blue-600 h-4"></div>
+            <div class="space-y-2">
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Riyanti</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sri Handayani</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Eka Wulansari</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Eni Sumarsih</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Dewi Lestari</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Rana Nurwahid</div>              
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center space-y-2">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-lg font-semibold dark:text-white">Bag. Keuangan dan Pengelolaan Usaha</h4>
+              <p class="text-gray-700 dark:text-gray-300">Ismawati (Koordinator)</p>
+            </div>
+            <div class="border-l-4 border-blue-600 h-4"></div>
+            <div class="space-y-2">
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Ristiyanti</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sakiyem</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sokirah</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Wantinem</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Wartini</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sohadi</div>              
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center space-y-2">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center">
+              <h4 class="text-lg font-semibold dark:text-white">Bag. Kemitraan dan Hubungan Eksternal</h4>
+              <p class="text-gray-700 dark:text-gray-300">Gimann (Koordinator)</p>
+            </div>
+            <div class="border-l-4 border-blue-600 h-4"></div>
+            <div class="space-y-2">
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sulardi</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Rizki Isjayanti</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sukimin</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Suwarni</div>
+              <div class="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-md text-center">Sri Nanik</div>           
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 py-8">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-white text-center mb-8">Mitra Juragan Perempuan Tani</h3>
+    
+    <div class="flex justify-center flex-wrap gap-8">
+      <!-- Logo 1: Dinas Pertanian -->
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+        <img src={pertanian.src} alt="Dinas Pertanian" class="w-32 h-32 object-contain">
+      </div>
+
+      <!-- Logo 2: Koperasi dan UKM -->
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+        <img src={koprasi.src} alt="Koperasi dan UKM" class="w-32 h-32 object-contain">
+      </div>
+
+      <!-- Logo 3: UGM Fakultas Kehutanan -->
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+        <img src={peternakan.src} alt="UGM Fakultas Kehutanan" class="w-32 h-32 object-contain">
+      </div>
+
+      <!-- Logo 4: BISMA -->
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+        <img src={ibisma.src} alt="BISMA" class="w-32 h-32 object-contain">
+      </div>
+
+      <!-- Logo 5: SiBakul Jogja -->
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+        <img src={sibakul.src} alt="SiBakul Jogja" class="w-32 h-32 object-contain">
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    // Fungsi untuk menampilkan struktur PPKO Labma
+    document.getElementById('btnLabma').addEventListener('click', function() {
+      document.getElementById('labmaStructure').classList.toggle('hidden');
+      document.getElementById('kwtStructure').classList.add('hidden');
+    });
+
+    // Fungsi untuk menampilkan struktur KWT Purwobinangun
+    document.getElementById('btnKWT').addEventListener('click', function() {
+      document.getElementById('kwtStructure').classList.toggle('hidden');
+      document.getElementById('labmaStructure').classList.add('hidden');
+    });
+  </script>
+</Layout>

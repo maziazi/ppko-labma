@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import VisiMisi from '~/components/widgets/VisiMisi.astro';
+
+const metadata = {
+  title: 'StikSusu',
+};
+const balado= {
+    src: '/assets/images/stik/BALADO.png', // Ganti dengan path gambar yang sesuai
+  };
+  const jagung= {
+    src: '/assets/images/stik/JAGUNG BAKAR.png', // Ganti dengan path gambar yang sesuai
+  };
+  const keju= {
+    src: '/assets/images/stik/KEJU.png', // Ganti dengan path gambar yang sesuai
+  };
+  const original= {
+    src: '/assets/images/stik/ORIGINAL.png', // Ganti dengan path gambar yang sesuai
+  };
+---
+
+<Layout metadata={metadata}>
+  <h1 class="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">Stik Susu</h1>
+
+  <!-- Products Card Section -->
+  <div class="container mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <!-- Jagung Bakar Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={jagung.src} alt="Stik Susu Sapi Jagung Bakar" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Stik Susu Sapi Jagung Bakar</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Stik susu sapi dengan rasa jagung bakar yang gurih dan renyah.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 5,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Stik%20Susu%20Jagung%20Bakar" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Keju Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={keju.src} alt="Stik Susu Sapi Keju" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Stik Susu Sapi Keju</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Stik susu sapi dengan rasa keju yang kaya dan gurih.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 5,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Stik%20Susu%20Keju" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Balado Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={balado.src} alt="Stik Susu Sapi Balado" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Stik Susu Sapi Balado</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Stik susu sapi dengan rasa balado pedas dan gurih.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 5,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Stik%20Susu%20Balado" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+
+    <!-- Original Flavor -->
+    <div class="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+      <img src={original.src} alt="Stik Susu Sapi Original" class="w-full h-56 object-cover">
+      <div class="p-6 flex-1">
+        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Stik Susu Sapi Original</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">Stik susu sapi original yang renyah dengan rasa susu alami.</p>
+        <p class="text-xl font-bold text-gray-800 dark:text-white mb-4">Rp 5,000</p>
+        <a href="https://wa.me/6281237594404?text=Halo%20saya%20ingin%20memesan%20Stik%20Susu%20Original" target="_blank" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg text-center block hover:bg-green-700 transition duration-300">
+          Pesan
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
